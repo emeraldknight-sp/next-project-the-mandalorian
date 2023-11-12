@@ -1,0 +1,53 @@
+@import "../styles/common/variables.scss";
+
+.main {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	gap: 32px;
+	height: 70vh;
+}
+
+.main-content {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.main-content__category {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.main-content__category span {
+	font-size: $text-sm;
+	font-family: $tipographyOswald;
+	font-weight: 400;
+	line-height: $line-height-sm;
+}
+
+.main-content__vote {
+	display: inline-flex;
+	gap: 4px;
+}
+
+.main-content__vote p,
+.main-content__vote span {
+	font-size: $text-sm;
+	font-family: $tipographyOswald;
+	font-weight: 400;
+	line-height: $line-height-sm;
+}
+
+.main-content__vote span {
+	border-image: linear-gradient(45deg, $primary-color, $secondary-color);
+	border-image-slice: 1;
+	border-style: solid;
+	border-width: 3px;
+}
+
+.main-group-button {
+	display: flex;
+	gap: 32px;
+}
