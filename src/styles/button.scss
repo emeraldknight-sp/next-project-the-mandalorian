@@ -1,0 +1,54 @@
+@import "../styles/common/variables.scss";
+
+.button {
+	display: inline-flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	flex: 1;
+
+	font-size: $text-xl;
+	font-family: $tipography-content;
+	font-weight: 600;
+	line-height: $line-height-lg;
+	text-transform: uppercase;
+
+	border: none;
+	padding: 8px;
+	cursor: pointer;
+}
+
+.button a {
+	text-decoration: none;
+	color: white;
+}
+
+.button--icon {
+	flex: none;
+	border-radius: 50%;
+	background: transparent;
+}
+
+.button.border {
+	background: transparent;
+	border-image: linear-gradient(150deg, $secondary-color, $primary-color);
+	border-image-slice: 1;
+	border-style: solid;
+	border-width: 3px;
+	padding: 8px 8px 2px;
+}
+
+.button.border--left {
+	position: relative;
+	background-color: transparent;
+}
+
+.button.border--left::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: -3px;
+	bottom: 0;
+	width: 3px;
+	background: linear-gradient(150deg, $secondary-color, $primary-color);
+}
