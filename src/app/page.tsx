@@ -1,95 +1,70 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import Image from "next/image";
+import Link from "next/link";
+import { AiOutlineMenu } from "react-icons/ai";
+import { getData } from "@/utils/api";
 
-export default function Home() {
-  return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+import Logo from "../assets/star-wars-logo.webp";
+import ArtName from "../assets/mandalorian-art-name.webp";
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+import "../styles/reset.scss";
+import "../styles/globals.scss";
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
+export default async function Home() {
+	const data = await getData();
+	const mandalorian = data[0];
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+	return (
+		<div className="large-container">
+			<header className="header">
+				<Image src={Logo} width={70} alt="Star Wars Logo" />
+				<button type="button" className="button button--icon">
+					<AiOutlineMenu size={24} />
+				</button>
+			</header>
+			<main className="main">
+				<div className="main__content">
+					<div className="main__content--category">
+						<span>TV Series</span>
+						<div className="main__content--vote">
+							<span>IMDb</span>
+							<span>{mandalorian.vote_average.toFixed(1)}</span>
+						</div>
+					</div>
+					<Image
+						src={ArtName}
+						alt="The Mandalorian Art Name"
+						style={{
+							width: "100%",
+							height: "auto",
+						}}
+						priority
+					/>
+					<p>{mandalorian.overview}</p>
+				</div>
+				<div className="main__group-button">
+					<button type="button" className="button border">
+						<Link
+							href="https://www.disneyplus.com/pt-br/series/the-mandalorian/3jLIGMDYINqD"
+							target="_self"
+							rel="noopener noreferrer"
+						>
+							Watch now
+						</Link>
+					</button>
+					<button type="button" className="button border--left">
+						<Link
+							href="https://www.youtube.com/watch?v=aOC8E8z_ifw"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							Trailer
+						</Link>
+					</button>
+				</div>
+			</main>
+			<footer className="footer">
+				<span>Disney. All rights reserved.</span>
+			</footer>
+		</div>
+	);
 }
