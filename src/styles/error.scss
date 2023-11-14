@@ -1,0 +1,46 @@
+@import "../styles/common/variables.scss";
+
+.large-container--error {
+	display: flex;
+	flex-direction: column;
+	width: 100vw;
+	height: 100vh;
+	position: relative;
+	z-index: 1;
+}
+
+.main--error {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  flex: 1;
+}
+
+.error__content {
+  display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 16px;
+  flex: 1;
+}
+
+.error__content--title {
+	font-size: $text-3xl;
+  font-family: $tipography-content;
+  font-weight: 600;
+  line-height: $line-height-3xl;
+}
+
+.error__content--button {
+	background-color: red;
+	padding: 8px 16px 2px;
+  width: max-content;
+  max-height: 48px;
+	border-radius: 4px;
+  transition: all .3s ease;
+}
+
+.error__content--button:hover {
+  filter: brightness(.9);
+}
