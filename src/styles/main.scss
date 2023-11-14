@@ -9,6 +9,11 @@
 	height: 70vh;
 }
 
+.main--error {
+	justify-content: center;
+	align-items: center;
+}
+
 .main__content {
 	display: flex;
 	flex-direction: column;
@@ -75,6 +80,10 @@
 	.main {
 		justify-content: flex-end;
 		align-items: flex-end;
+	}
+
+	.main--error {
+		align-items: center;
 	}
 
 	.main__content,

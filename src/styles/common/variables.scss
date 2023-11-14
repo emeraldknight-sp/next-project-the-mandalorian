@@ -1,4 +1,6 @@
-$tipography-content: var(--tipographyTeko);
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@400;700&display=swap');
+
+$tipography-content: "Teko", sans-serif;
 
 $text-5xl: 3rem;
 $line-height-5xl: 1;
