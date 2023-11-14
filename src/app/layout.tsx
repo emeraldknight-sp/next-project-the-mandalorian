@@ -1,11 +1,4 @@
 import type { Metadata, Viewport } from "next";
-import { Teko } from "next/font/google";
-
-const kdam = Teko({
-	subsets: ["latin"],
-	variable: "--tipographyTeko",
-	display: "swap",
-});
 
 export const metadata: Metadata = {
 	title: "The Mandalorian | Disney Plus+ | Star Wars Series",
@@ -80,7 +73,7 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: RootLayoutProps) {
 	return (
 		<html lang="en">
-			<body className={kdam.className}>{children}</body>
+			<body className={teko.className}>{children}</body>
 		</html>
 	);
 }
