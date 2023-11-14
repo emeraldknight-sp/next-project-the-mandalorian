@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Teko } from "next/font/google";
 
-const kdam = Teko({
+const teko = Teko({
 	subsets: ["latin"],
 	variable: "--tipographyTeko",
 	display: "swap",
@@ -80,7 +80,7 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: RootLayoutProps) {
 	return (
 		<html lang="en">
-			<body className={kdam.className}>{children}</body>
+			<body className={teko.className}>{children}</body>
 		</html>
 	);
 }
