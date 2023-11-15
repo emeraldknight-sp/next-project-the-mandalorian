@@ -1,36 +1,71 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 align="center">Project: The Mandalorian</h1>
 
-## Getting Started
+<p align="center">
+  <img alt="logo" src=".github/project.webp" width="50%">
+</p>
 
-First, run the development server:
+This project involves creating a page dedicated to Disney Plus' renowned series "The Mandalorian". Developed using Next.js and elegantly styled with SASS, the page offers an interactive and informative experience about the saga. Integrating series data through a public API, the project stands out for its modular structure, optimized design and ease of navigation.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+<p align="center">
+  <a href="#-tecnologias">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-projeto">Project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-license">License</a>
+</p>
+
+## 🔗 Links
+[![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white)](https://instagram.com/davidalmeidadev)
+[![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://instagram.com/davidalmeidadev)
+[![Brave](https://img.shields.io/badge/Portfolio-yellow?style=for-the-badge&logo=Brave&logoColor=white)](https://react-project-portfolio.vercel.app/)
+[![Licence](https://img.shields.io/github/license/Ileriayo/markdown-badges?style=for-the-badge)](./LICENSE)
+
+## 🚀 Tecnologies
+
+This project was developed with the following technologies:
+
+- HTML5, CSS3, JS ES6+
+- [Node e Yarn](https://nodejs.org/)
+- [Next.js](https://nextjs.org/docs)
+- [React Lottie](https://www.npmjs.com/package/react-lottie)
+- [React Icons](https://www.npmjs.com/package/react-icons)
+- [Typescript](https://www.typescriptlang.org/docs/)
+- [Axios](https://axios-http.com/ptbr/docs/intro)
+- [SASS](https://sass-lang.com/documentation/)
+
+## 💻 Project
+
+In this project, I developed a page dedicated to the series "The Mandalorian" using Next.js and SASS for an efficient and stylized web experience. Next.js provided the ideal foundation, making it easy to create a single-page application with dynamic routing and server-side rendering. With the addition of SASS, we achieve elegant and modular styling, making the code cleaner and easier to maintain.
+
+The integration of a public API enriched the page with dynamic data from the series, allowing users to access up-to-date information about episodes, characters and related details. Every technological and design choice has been carefully considered to provide an immersive experience for Mandalorian fans, while also serving as a practical example of good web development practices.
+
+## 🏡 Get started
+
+Installing project dependencies
+
+```sh
+yarn install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Application initialization
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```sh
+yarn dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Application build
 
-## Learn More
+```sh
+yarn build
+```
 
-To learn more about Next.js, take a look at the following resources:
+## 🔖 Layout
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+You can view the project layout by clicking [here](https://dribbble.com/shots/8359316-The-Mandalorian?utm_source=pinterest&utm_campaign=pinterest_shot&utm_content=The+Mandalorian&utm_medium=Social_Share).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+<p align="center">
+  <img alt="weather" src=".github/layout.webp" width="70%">
+</p>
 
-## Deploy on Vercel
+## 📝 License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+This project is under the [MIT license](./LICENSE).
