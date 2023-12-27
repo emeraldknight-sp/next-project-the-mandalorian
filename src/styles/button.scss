@@ -37,6 +37,10 @@
 	border-width: 3px;
 	padding: 8px 8px 2px;
 }
+.button.border,
+.button.border--left {
+	max-width: 125px;
+}
 
 .button.border--left {
 	position: relative;

@@ -75,16 +75,23 @@
 	.main {
 		justify-content: flex-end;
 		align-items: flex-end;
+		gap: 48px;
 	}
 
 	.main__content,
 	.main__group-button {
 		width: 50%;
 	}
+
 }
 
 @media (min-width: 1024px) {
 	.main {
 		justify-content: flex-start;
+		gap: 64px;
+	}
+
+	.main__group-button {
+		gap: 64px;
 	}
 }
